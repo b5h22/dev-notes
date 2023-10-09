@@ -1,5 +1,5 @@
-# Reading notes
+# Dev notes
 
-These are my detailed notes taken while reading computer science related books. Most of the notes are in french.
+These are the notes from my journey in learning software development.
 
-**[Read the notes online](https://mkrtchian.github.io/reading-notes/)**
+**[b5h22's Dev notes](https://b5h22.github.io/dev-notes/)**
