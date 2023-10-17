@@ -10,7 +10,7 @@ const config: DocsThemeConfig = {
   // chat: {
   //   link: 'https://discord.com',
   // },
-  docsRepositoryBase: 'https://github.com/b5h22/dev-notes/tree/main',
+  docsRepositoryBase: 'https://github.com/b5h22/dev-notes/tree/main/pages',
   feedback: {
     content: () => <>Question? Give me feedback →</>,
     labels: 'feedback',
