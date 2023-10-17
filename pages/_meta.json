@@ -2,7 +2,7 @@
   "index": "Introduction",
   "c": "C",
   "react": "React",
-  "error_notes": "Error Notes",
+  "error-notes": "Error Notes",
   "about": {
     "title": "About",
     "type": "page"
