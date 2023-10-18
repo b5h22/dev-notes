@@ -19,6 +19,7 @@ const nextConfig = {
 }
 
 module.exports = {
+  basePath: '/dev-notes',
   ...withNextra(),
   ...nextConfig,
 }
