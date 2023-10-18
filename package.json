@@ -1,5 +1,4 @@
 {
-  "homepage": "https://b5h22.github.io/dev-notes/",
   "name": "dev-notes",
   "version": "0.1.0",
   "private": true,
@@ -7,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export",
-    "deploy": "touch out/.nojekyll && gh-pages -d out"
+    "export": "next build && next export && touch out/.nojekyll",
+    "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
     "next": "^13.5.4",

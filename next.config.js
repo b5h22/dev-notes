@@ -4,8 +4,8 @@ const withNextra = require('nextra')({
   themeConfig: './theme.config.tsx',
 })
 
-const isProduction = process.env.NODE_ENV === 'production'
-const assetPrefix = isProduction ? '/dev-notes' : ''
+const isProduction = process.env.NODE_ENV === 'production';
+const assetPrefix = isProduction ? '/dev-notes' : '';
 
 const nextConfig = {
   images: {
@@ -16,9 +16,9 @@ const nextConfig = {
   trailingSlash: true,
   assetPrefix,
   basePath: assetPrefix,
-}
+};
 
 module.exports = {
   ...withNextra(),
   ...nextConfig,
-}
+};
