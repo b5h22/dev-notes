@@ -19,10 +19,6 @@ const nextConfig = {
 }
 
 module.exports = {
-  ...withNextra(
-    {
-      basePath: assetPrefix,
-    }
-  ),
+  ...withNextra(),
   ...nextConfig,
 }
