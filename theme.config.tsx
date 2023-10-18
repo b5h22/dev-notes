@@ -7,16 +7,13 @@ const config: DocsThemeConfig = {
   project: {
     link: 'https://github.com/b5h22/dev-notes',
   },
-  // chat: {
-  //   link: 'https://discord.com',
-  // },
-  docsRepositoryBase: 'https://github.com/b5h22/dev-notes/tree/main/pages',
+  docsRepositoryBase: 'https://github.com/b5h22/dev-notes/tree/main',
+  footer: {
+    text: '© Copyright 2023 - Made by b5h22',
+  },
   feedback: {
     content: () => <>Question? Give me feedback →</>,
     labels: 'feedback',
-  },
-  footer: {
-    text: 'Made by b5h22',
   },
   useNextSeoProps,
 }
