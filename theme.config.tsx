@@ -9,7 +9,7 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/b5h22/dev-notes/tree/main',
   footer: {
-    text: '© Copyright 2023 - Made by b5h22',
+    text: '© 2023 - b5h22 Powered by Nextra, Github Pages',
   },
   feedback: {
     content: () => <>Question? Give me feedback →</>,
