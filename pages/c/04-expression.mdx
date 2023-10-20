@@ -38,3 +38,50 @@ C language doesn't have special words for true or false. Instead, it sees the nu
 | operand `&&` operand       | both operands are true      |
 | operand `\|\|` operand     | one of the operands is true |
 | `!` operand                | the operand is not true     |
+
+<br />
+
+### DeMorgan's Law
+
+DeMorgan's Law is a rule in logic that helps us simplify complex statements. It has two parts:
+
+- "Not (A and B)" is the same as "(Not A) or (Not B)"
+- "Not (A or B)" is the same as "(Not A) and (Not B)"
+
+Example:
+```c
+// below logically identical
+
+// example #1
+c = !(a && b)
+c = !a || !b
+
+// example #2
+c = !a && !b
+c = !(a || b)
+```
+<br />
+
+### Binary operands
+
+| Expression             | Shorthand   | Longhand     | Meaning                                 |
+|------------------------|-------------|--------------|-----------------------------------------|
+| operand `+=` operand   | `i += 4`    | `i = i + 4`  | add 4 to i and assign to i              |
+| operand `-=` operand   | `i -= 4`    | `i = i - 4`  | subtract 4 from i and assign to i       |
+| operand `*=` operand   | `i *= 4`    | `i = i * 4`  | multiply i by 4 and assign to i         |
+| operand `/=` operand   | `i /= 4`    | `i = i / 4`  | divide i by 4 and assign to i           |
+| operand `%=` operand   | `i %= 4`    | `i = i % 4`  | remainder after i / 4 then assign to i  |
+
+<br />
+
+### Unary Operands
+
+| Expression | Shorthand | Longhand  | Meaning                     |
+|------------|-----------|-----------|-----------------------------|
+| ++operand  | ++i       | i = i + 1 | (prefix) increment i by 1   |
+| operand++  | i++       | i = i + 1 | (postfix) increment i by 1  |
+| --operand  | --i       | i = i - 1 | (prefix) decrement i by 1   |
+| operand--  | I--       | i = i - 1 | (postfix) decrement i by 1  |
+
+- Prefix does the operation first, then gives you the result.
+- Postfix gives you the result first, then does the operation.
