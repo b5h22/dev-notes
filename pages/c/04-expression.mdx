@@ -85,3 +85,18 @@ c = !(a || b)
 
 - Prefix does the operation first, then gives you the result.
 - Postfix gives you the result first, then does the operation.
+
+<br />
+
+### Type Casting
+Type conversions are supported by the C programming language. In order to convert the type of an operand, you put the target type in parenthesis before the operand. This statement is known as a cast.
+
+```c
+int main() {
+    int a = 5, b = 2;
+    printf("Result of int division: %d\n", a / b); // 2
+    printf("Result of double division: %f\n", (double)a / b); // 2.5
+
+    return 0;
+}
+```
