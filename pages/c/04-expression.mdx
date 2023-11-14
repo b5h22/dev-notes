@@ -100,3 +100,34 @@ int main() {
     return 0;
 }
 ```
+
+<br />
+
+### Mixed-Type Expression
+Computers use different parts to handle whole numbers and decimal numbers. So, they can only work with calculations that use the same type of numbers. But sometimes, calculations use both types of numbers. So, we need rules to change one type of number into another type for these calculations.
+
+| Type          | Rank       |
+|---------------|------------|
+| `long double` | highest  |
+| `double`      | ...      |
+| `float`       | ...      |
+| `long long`   | ...      |
+| `long`        | ...      |
+| `int`         | ...      |
+| `short`       | ...      |
+| `char`        | lowest   |
+
+
+In a mixed-type expression, lower-ranked types are automatically converted to the type of the highest-ranked operand. This is called "promotion".
+```c
+int a = 5;
+double b = 3.14;
+b = a; // 'a' is automatically promoted to a double
+```
+
+"Narrowing" is the opposite of promotion. It's when a value of a higher-ranked type is assigned to a variable of a lower-ranked type. This can cause a loss of data.
+```c
+double a = 3.14;
+int b;
+b = a; // 'a' is truncated to an int, so 'b' becomes 3, not 3.14
+```
