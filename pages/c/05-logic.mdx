@@ -18,3 +18,111 @@ Preliminary Design is the early stage of designing where you create a basic plan
 
 - Pseudocode: It's like a draft of your program, written in simple English. It helps you plan the steps your program will take, without using real code.
 - Flowcharts: These are pictures with symbols and arrows that show the steps and flow of your program. They help you see and share your plan before you start coding.
+
+<br />
+
+### Selection constructs
+The C language supports three selection constructs:
+- optional path
+- alternative paths
+- conditional expression
+The flow charts for these three constructs are shown below:
+
+![c-selection](../.././src/c-selection.png)
+
+<br />
+
+#### Optional Path
+It is a programming term that refers to a part of the code which only runs if a specific condition is met. In other words, this part of the code is optional and only runs when the condition is true.
+```c
+if (condition)
+  sequence
+```
+Here, the condition could be a relational expression or a logical expression. The sequence may be a single statement or a code block.
+
+##### Single Statement
+```c
+if (likePizza == 1)
+  printf("I like pizza\n");
+```
+##### Code Block (more than a single statement)
+```c
+if (likePizza == 1)
+{
+  printf("I like pizza\n");
+  printf("I want more pizza\n");
+}
+```
+
+<br />
+
+#### Alternative Paths
+The C language supports two ways of describing alternative paths: an binary select construct and a multiple selection construct.
+
+##### Binary Selection
+```c
+if (condition)
+  sequence1
+else
+  sequence2
+```
+Here, the condition could be a relational expression or a logical expression. The sequence may be a single statement or a code block. The program executes the sequence following the if only if the condition is true. The program executes the sequence following the else only if the condition is false.
+
+##### Single Statement
+```c
+if (likePizza == 1)
+  printf("I like pizza\n");
+else
+  printf("I hate pizza\n");
+```
+
+##### Code Block (more than a single statement)
+```c
+if (likePizza == 1)
+{
+  printf("I like pizza\n");
+}
+else
+{
+  printf("I hate pizza\n");
+  printf("I don't want pizza\n");
+}
+```
+
+##### Multiple Selection
+For three alternative paths, we append an if else construct to the else keyword.
+```c
+ if (condition)
+  sequence
+ else if (condition)
+  sequence
+ else
+  sequence
+```
+If the first condition is true, the program skips the second and third sequences. If the first condition is false, the program skips the first sequence and evaluates the second condition. The program executes the second sequence only if the first condition is false and the second condition is true. The program executes the third sequence and skips the first two only if both conditions are false.
+
+##### Compound Conditions
+The condition in a selection construct may be a compound condition. A compound condition takes the form of a logical expression
+
+```c
+if (age > 12 && age < 16)
+{
+  printf("Student Fare - no id required\n");
+}
+else if (age > 15 && age < 20)
+{
+  printf("Student Fare - id is required\n");
+}
+else if (age < 13)
+{
+  printf("Child ride for free!\n");
+}
+else if (age >= 65)
+{
+  printf("Senior Fare - id is required\n");
+}
+else
+{
+  printf("Adult Fare\n");
+}
+```
