@@ -143,3 +143,19 @@ default:
 }
 ```
 "switch" is like a multi-choice quiz. You have a question (condition) and many choices (cases). If your question matches 'choice1', you will do something. If it matches 'choice2', you will do something else. If it doesn't match any choices, you will do another thing (default). "break" means you stop and move on. If there is no "break", you will also do the things for the next choice.
+
+<br />
+
+#### Conditional Expression
+The conditional expression is a ternary operator that takes three operands. It is used to replace an if else construct that assigns a value to a variable based on a condition. The conditional expression has the following form:
+```c
+condition ? expression1 : expression2
+```
+First, it checks a condition. If it's true, it uses the first expression, and if it's false, it uses the second. Only the expression that matches the condition is used.
+
+```c
+// Example
+int a = 10, b = 20;
+int max = (a > b) ? a : b;
+```
+In this example, (a > b) is the condition. If a is greater than b, the expression a is used, and max becomes a. If a is not greater than b, the expression b is used, and max becomes b. Since 20 is greater than 10, in this case, max would become 20.
