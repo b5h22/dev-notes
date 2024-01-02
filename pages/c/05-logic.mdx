@@ -159,3 +159,57 @@ int a = 10, b = 20;
 int max = (a > b) ? a : b;
 ```
 In this example, (a > b) is the condition. If a is greater than b, the expression a is used, and max becomes a. If a is not greater than b, the expression b is used, and max becomes b. Since 20 is greater than 10, in this case, max would become 20.
+
+<br />
+
+### Iteration constructs
+In C programming, there are three ways to repeat actions: 'while', 'do while', and 'for'. Each method needs a set-up step, a condition to check, and a step to change things for the next round. If we forget to change things, or the condition is always true, the action will repeat forever, creating an infinite loop.
+![c-iteration](../.././src/c-iteration.png)
+
+#### while
+```c
+/*
+  while (condition)
+  {
+      sequence
+  }
+*/
+
+int i = 1;
+while (i <= 5) {
+    printf("%d ", i);
+    i++;
+}
+```
+
+#### do while
+```c
+/*
+  do {
+      sequence
+  } while (condition);
+*/
+
+int i = 1;
+do {
+    printf("%d ", i);
+    i++;
+} while (i <= 5);
+```
+
+#### for
+```c
+/*
+  for (initialization; condition; change)
+  {
+      sequence
+  }
+*/
+
+for (int i = 1; i <= 5; i++) {
+    printf("%d ", i);
+}
+```
+
+In all three examples, the loop prints the numbers 1 to 5. The while loop checks the condition before the loop starts, the do/while loop checks it after the loop runs once, and the for loop includes the initialization, condition, and increment all in one line.
+
