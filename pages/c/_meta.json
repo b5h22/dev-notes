@@ -3,5 +3,6 @@
   "02-types": "02-Types",
   "03-simple-calculation": "03-Simple Calculation",
   "04-expression": "04-Expression",
-  "05-logic": "05-Logic"
+  "05-logic": "05-Logic",
+  "06-array": "06-Array"
 }
