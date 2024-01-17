@@ -12,5 +12,5 @@ export function useNextSeoProps() {
   } else {
     result.titleTemplate = '%s'
   }
-  return result
+  return result;
 }
