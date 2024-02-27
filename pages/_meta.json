@@ -2,6 +2,8 @@
   "index": "Introduction",
   "c": "C",
   "react": "React",
+  "js-challenge": "JS-Challenge",
+  "leetcode": "Leetcode",
   "error-notes": "Error Notes",
   "about": {
     "title": "About",
