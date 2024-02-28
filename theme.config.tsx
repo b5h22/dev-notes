@@ -16,6 +16,9 @@ const config: DocsThemeConfig = {
     labels: 'feedback',
   },
   useNextSeoProps,
+  sidebar: {
+    defaultMenuCollapseLevel: 1,
+  },
 }
 
 export default config
