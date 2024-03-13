@@ -14,8 +14,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: true,
-  assetPrefix,
-  basePath: assetPrefix,
+  // assetPrefix,
+  // basePath: assetPrefix,
   output: 'export',
 };
 
