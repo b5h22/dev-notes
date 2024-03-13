@@ -57,6 +57,7 @@ var canPlaceFlowers = function(flowerbed, n) {
 ## Solution from others
 ```js
 
+// The solution is similar to mine, but it is more concise and efficient.
 var canPlaceFlowers = function(flowerbed, n) {
   let count = 0;
   for(let i = 0; i < flowerbed.length; i++) {
@@ -70,6 +71,18 @@ var canPlaceFlowers = function(flowerbed, n) {
 };
 
 ```
+
+## Explanation
+1. `Start Counting`: Begin with a count of 0. This will track how many flowers we can plant.
+2. `Loop Through`: Go through each spot in the flowerbed one by one.
+3. `Check Conditions`: For each spot, check three things: 
+> - If the current spot is empty (0 means no flower there).
+> - If the spot to the left is empty or it's the first spot in the flowerbed.
+> - If the spot to the right is empty or it's the last spot in the flowerbed.
+4. `Plant Flower`: If all conditions are met (the spot is empty and both adjacent spots are empty or edges), plant a flower there (change 0 to 1) and increase your count by 1.
+5. `Repeat`: Keep doing this for every spot in the flowerbed.
+6. `Final Check`: In the end, see if the count of flowers you planted is equal to or more than 'n', the number of flowers you wanted to plant.
+7. `Result`: Return true if you could plant at least 'n' flowers without breaking the rules; otherwise, return false.
 
 ## Note
 > In JavaScript, negative index is not allowed. It will return undefined. If you want to check the last element of an array, you can use `array[array.length - 1]` instead of `array[-1]`.
