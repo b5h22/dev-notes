@@ -29,6 +29,10 @@ Note that you must do this in-place without making a copy of the array.
 // Not quite accurate solution
 // need to use two pointers to solve this problem
 // Also bigO is O(n^2) (splice method is O(n) and the for loop is O(n))
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
 var moveZeroes = function(nums) {
     for(let i = nums.length - 2; i >= 0; i--) {
         if(nums[i] === 0) {
@@ -45,6 +49,10 @@ var moveZeroes = function(nums) {
 ```js
 
 // More accurate solution using two pointers
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
 var moveZeroes = function (nums) {
   let i = 0;
   let j = 1;

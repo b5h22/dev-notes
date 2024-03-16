@@ -27,6 +27,11 @@ Find a contiguous subarray whose length is equal to k that has the maximum avera
 ```js
 
 // failed: Time Limit Exceeded
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
 var findMaxAverage = function (nums, k) {
   let maxAverage = 0
   if (nums.length === 1) {
@@ -52,6 +57,11 @@ var findMaxAverage = function (nums, k) {
 ```js
 
 // using sliding window
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
 var findMaxAverage = function(nums, k) {
   let sum = 0;
   for (let i = 0; i < k; i++) {

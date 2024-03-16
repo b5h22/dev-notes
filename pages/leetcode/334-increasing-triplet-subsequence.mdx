@@ -32,6 +32,10 @@ Given an integer array `nums`, return `true` if there exists a triple of indices
 ```js
 
 // Failed: Time Limit Exceeded
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
 var increasingTriplet = function (nums) {
   for (let i = 0; i < nums.length - 2; i++) {
     let first = nums[i]

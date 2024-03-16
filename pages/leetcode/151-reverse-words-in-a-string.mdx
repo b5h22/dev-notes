@@ -38,6 +38,10 @@ Note that `s` may contain leading or trailing spaces or multiple spaces between 
 ## My Solution
 ```js
 
+/**
+ * @param {string} s
+ * @return {string}
+ */
 var reverseWords = function(s) { 
     return s.trim().split(' ').filter(word => word.length > 0).reverse().join(' ');
 };
