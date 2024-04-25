@@ -6,5 +6,6 @@
   "05-logic": "05-Logic",
   "06-array": "06-Array",
   "07-structures": "07-Structures",
-  "08-function": "08-Function"
+  "08-function": "08-Function",
+  "09-pointer": "09-Pointer"
 }
