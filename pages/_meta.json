@@ -1,6 +1,7 @@
 {
   "index": "Introduction",
   "c": "C",
+  "c++": "C++",
   "react": "React",
   "js-challenge": "JS-Challenge",
   "leetcode": "Leetcode",
