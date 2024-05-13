@@ -4,6 +4,9 @@ const withNextra = require('nextra')({
   themeConfig: './theme.config.tsx',
 })
 
+const isProduction = process.env.NODE_ENV === 'production';
+const assetPrefix = isProduction ? '/dev-notes' : '';
+
 const nextConfig = {
   images: {
     unoptimized: true,
@@ -11,7 +14,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: true,
-  output: 'export'
+  assetPrefix,
+  basePath: assetPrefix,
+  output: 'export',
 };
 
 module.exports = {
