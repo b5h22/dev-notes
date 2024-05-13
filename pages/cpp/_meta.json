@@ -1,5 +1,6 @@
 {
   "01-basics": "01-Basics",
   "02-foundations": "02-Foundations",
-  "03-dynamic-memory": "03-Dynamic Memory"
+  "03-dynamic-memory": "03-Dynamic Memory",
+  "04-encapsulation": "04-Encapsulation"
 }
