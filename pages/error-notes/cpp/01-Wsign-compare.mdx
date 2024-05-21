@@ -7,7 +7,7 @@ Comparison between signed and unsigned integer expressions.
 
 #### Details
 The issue at each line is in the for loop where 'i < size'. Here, 'i' is an unsigned integer (size_t) while the expression 'size - 1' or 'size' could potentially be a signed integer.
-```c++
+```cpp
 
 for (size_t i = 0; i < size - 1; i++) { ... }
 
