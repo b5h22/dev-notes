@@ -1,5 +1,6 @@
 {
   "javascript": "JavaScript",
   "express": "Express.js",
-  "01-http-protocol": "01-HTTP Protocol"
+  "01-http-protocol": "01-HTTP Protocol",
+  "02-json": "02-JSON"
 }
