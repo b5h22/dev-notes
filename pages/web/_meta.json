@@ -5,5 +5,6 @@
   "02-json": "02-JSON",
   "03-ajax": "03-AJAX",
   "04-rest-api": "04-REST API",
-  "05-ejs": "05-EJS"
+  "05-ejs": "05-EJS",
+  "06-form": "06-Form"
 }

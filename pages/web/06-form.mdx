@@ -1,0 +1,84 @@
+# HTML Forms and Form Processing
+
+## HTML Form Elements
+
+1. **Form**: Main container for form elements
+   - Key attributes: `method`, `action`, `enctype`
+   - Default `enctype` is "application/x-www-form-urlencoded"
+   - Use "multipart/form-data" for file uploads
+   Example:
+   ```html
+   <form method="post" action="/submit" enctype="multipart/form-data">
+     <!-- Form elements go here -->
+   </form>
+   ```
+
+2. **Input**: Creates various input types
+   - Default type is text
+   - Other types: color, date, time, email, number, range, file, etc.
+   - Always include a `name` attribute
+   Example:
+   ```html
+   <input type="text" name="username" placeholder="Enter username">
+   <input type="email" name="email" placeholder="Enter email">
+   <input type="file" name="avatar">
+   ```
+
+3. **Textarea**: Multi-line text input
+   Example:
+   ```html
+   <textarea name="comment" rows="4" cols="50"></textarea>
+   ```
+
+4. **Select**: Dropdown list or multi-select
+   - Can use `multiple` attribute for multiple selections
+   - Contains `<option>` elements
+   Example:
+   ```html
+   <select name="country">
+     <option value="usa">United States</option>
+     <option value="canada">Canada</option>
+     <option value="uk">United Kingdom</option>
+   </select>
+   ```
+
+5. **Checkbox**: Toggle input
+   - Submits "on" when checked, undefined when unchecked
+   Example:
+   ```html
+   <input type="checkbox" name="subscribe" id="subscribe">
+   <label for="subscribe">Subscribe to newsletter</label>
+   ```
+
+6. **Radio Button**: Mutually exclusive options
+   - Group by using the same `name` attribute
+   Example:
+   ```html
+   <input type="radio" name="gender" value="male" id="male">
+   <label for="male">Male</label>
+   <input type="radio" name="gender" value="female" id="female">
+   <label for="female">Female</label>
+   ```
+
+7. **Label**: Associates text with form controls
+   - Use `for` attribute or wrap the input
+   Example:
+   ```html
+   <label for="name">Name:</label>
+   <input type="text" id="name" name="name">
+   ```
+
+8. **Hidden**: Includes non-visible data in form submission
+   Example:
+   ```html
+   <input type="hidden" name="user_id" value="12345">
+   ```
+
+9. **Submit**: Initiates form submission
+   - Can be `<input type="submit">` or `<button type="submit">`
+   Example:
+   ```html
+   <input type="submit" value="Submit Form">
+   <!-- or -->
+   <button type="submit">Submit Form</button>
+   ```
