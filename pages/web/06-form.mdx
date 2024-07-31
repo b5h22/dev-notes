@@ -82,3 +82,55 @@
    <!-- or -->
    <button type="submit">Submit Form</button>
    ```
+## Processing Form Data
+
+### URL Encoded Form Data
+
+1. Set up an Express.js server
+2. Create an HTML form with appropriate controls
+3. Use body parsing middleware:
+   ```javascript
+   app.use(express.urlencoded({ extended: true }));
+   ```
+4. Create a route handler for form submission:
+   ```javascript
+   app.post('/addEntry', (req, res) => {
+     // Handle form data in req.body
+   });
+   ```
+5. Special consideration for checkboxes:
+   ```javascript
+   req.body.active = req.body.active ? true : false;
+   ```
+
+### Multipart Form Data (File Uploads)
+
+1. Use `enctype="multipart/form-data"` in the form
+2. Install and configure Multer middleware:
+   ```javascript
+   const multer = require('multer');
+   const upload = multer({ dest: 'uploads/' });
+   ```
+3. Apply Multer middleware to the route:
+   ```javascript
+   app.post('/uploadEntry', upload.single('avatar'), (req, res) => {
+     // Access form data: req.body
+     // Access file info: req.file
+   });
+   ```
+4. For more control over file naming, use diskStorage:
+   ```javascript
+   const storage = multer.diskStorage({
+     destination: 'uploads/',
+     filename: function (req, file, cb) {
+       cb(null, Date.now() + path.extname(file.originalname));
+     },
+   });
+   const upload = multer({ storage: storage });
+   ```
+
+## Important Considerations
+
+- Always validate and sanitize form data on the server-side
+- For cloud hosting with ephemeral or read-only file systems, consider using services like Cloudinary for file storage
+- Ensure proper error handling and user feedback in your form processing logic
