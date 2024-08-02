@@ -7,5 +7,6 @@
   "04-rest-api": "04-REST API",
   "05-ejs": "05-EJS",
   "06-form": "06-Form",
-  "07-postgresql": "07-PostgreSQL"
+  "07-postgresql": "07-PostgreSQL",
+  "08-mongodb": "08-MongoDB"
 }
