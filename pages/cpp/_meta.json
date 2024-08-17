@@ -5,5 +5,6 @@
   "04-encapsulation": "04-Encapsulation",
   "05-inheritance": "05-Inheritance",
   "06-polymorphism": "06-Polymorphism",
-  "07-adv-inheritance": "07-Advanced Inheritance"
+  "07-adv-inheritance": "07-Advanced Inheritance",
+  "08-adv-polymorphism": "08-Advanced Polymorphism"
 }
