@@ -1,0 +1,20 @@
+# Template
+
+## Basic Concepts and Syntax
+
+### Polymorphism in C++
+- **Polymorphism**: It is the ability to use a single interface to represent different data types or classes. In C++, polymorphism can be achieved through function overloading, operator overloading, and inheritance.
+- There are two types of polymorphism: compile-time (static) and runtime (dynamic):
+  - **Compile-time Polymorphism**: Also known as static polymorphism, it is resolved during compile time. It is achieved through function overloading, operator overloading, and templates.
+  - **Runtime Polymorphism**: Also known as dynamic polymorphism, it is resolved during runtime. It is achieved through inheritance and virtual functions.
+- **Template**: A `template` is a blueprint or formula for creating a generic class or function. It allows the creation of functions and classes that can operate with any data type.
+
+### Template Syntax
+- Templates begin with the `template` keyword, followed by template parameter lists enclosed in angle brackets (`<>`).
+- Template parameter list: Specifies the types or values that can be used to instantiate the template.
+```cpp
+template <typename T, int N>
+class MyClass {
+  // Class implementation
+};
+```
