@@ -9,6 +9,8 @@
   - **Runtime Polymorphism**: Also known as dynamic polymorphism, it is resolved during runtime. It is achieved through inheritance and virtual functions.
 - **Template**: A `template` is a blueprint or formula for creating a generic class or function. It allows the creation of functions and classes that can operate with any data type.
 
+<br />
+
 ### Template Syntax
 - Templates begin with the `template` keyword, followed by template parameter lists enclosed in angle brackets (`<>`).
 - Template parameter list: Specifies the types or values that can be used to instantiate the template.
@@ -18,3 +20,35 @@ class MyClass {
   // Class implementation
 };
 ```
+
+<br />
+
+### Template Body
+- The template body is defined using placeholders that are replaced during instantiation with actual arguments.
+- The placeholders are specified using the `typename` keyword for types and other keywords like `class`, `int`, etc., for non-type parameters.
+```cpp
+template <typename T>
+void print(T value) {
+    std::cout << value << std::endl;
+}
+```
+> The placeholder `T` is replaced by the actual type (like `int`, `float`) when the function is called.
+
+### Model Polymorphic Behavior Using Templates (Generics)
+- Templates in C++ allow you to write generic and reusable code that can handle different data types without duplication. This is known as parametric polymorphism.
+```cpp
+template <typename T>
+T add(T a, T b) {
+    return a + b;
+}
+
+int main() {
+    std::cout << add(3, 4) << std::endl; // Works with int
+    std::cout << add(3.5, 2.1) << std::endl; // Works with double
+}
+```
+> The `add` function can work with different data types (`int`, `double`, etc.) without the need for separate implementations.
+
+<br />
+
+## Types of Template Patameters
