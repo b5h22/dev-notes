@@ -51,4 +51,49 @@ int main() {
 
 <br />
 
-## Types of Template Patameters
+## Function Templates
+### Function Template Syntax
+- Function templates allow you to define a generic function that can operate with different data types.
+- The template parameter list specifies the types or values that can be used to instantiate the function template.
+```cpp
+template <typename T>
+void swap(T& a, T& b) {
+    T temp = a;
+    a = b;
+    b = temp;
+}
+```
+> The `swap` function can exchange the values of any two variables of the same type.
+
+<br />
+
+### Function Template Instantiation
+- Function templates are instantiated with actual types or values when called.
+- The compiler generates the appropriate function based on the template arguments.
+```cpp
+int main() {
+    int x = 5, y = 10;
+    swap(x, y); // Instantiates swap<int>(int&, int&)
+    std::cout << "x: " << x << ", y: " << y << std::endl; // Output: x: 10, y: 5
+}
+```
+> The `swap` function is instantiated with `int` as the template argument.
+
+<br />
+
+### Resolving Ambiguity
+- When multiple functions match the template arguments, the compiler may face ambiguity.
+- To resolve ambiguity, you can provide explicit template arguments or use function overloading.
+```cpp
+template <typename T>
+T maximum(T a, T b) {
+    return a > b ? a : b;
+}
+
+int main() {
+    double a = 3.5, b = 2.1;
+    float c = maximum<float>(a, b); // Explicit type specification
+    std::cout << c << std::endl;
+}
+```
+> The `maximum` function is instantiated with `float` as the template argument. The explicit type specification resolves ambiguity, ensuring the correct type is used in the function call.
