@@ -97,3 +97,59 @@ int main() {
 }
 ```
 > The `maximum` function is instantiated with `float` as the template argument. The explicit type specification resolves ambiguity, ensuring the correct type is used in the function call.
+
+<br />
+
+## Class Templates
+### Class Template Syntax
+- Class templates allow you to define a generic class that can operate with different data types.
+- The template parameter list specifies the types or values that can be used to instantiate the class template.
+```cpp
+template <typename T>
+class Array {
+    T arr[50];
+public:
+    T& operator[](int i) { return arr[i]; }
+};
+```
+> The `Array` class can store arrays of different types, such as `int`, `double`, etc.
+
+<br />
+
+### Class Template Instantiation
+- Class templates are instantiated with actual types or values when declared.
+- The compiler generates the appropriate class based on the template arguments.
+```cpp
+int main() {
+    Array<int> intArray;
+    intArray[0] = 10;
+    std::cout << intArray[0] << std::endl; // Output: 10
+
+    Array<double> doubleArray;
+    doubleArray[0] = 3.14;
+    std::cout << doubleArray[0] << std::endl; // Output: 3.14
+}
+```
+> The `Array` class is instantiated with `int` and `double` as the template arguments.
+
+<br />
+
+### Static Data Member Declarations in a Class Template
+- Class templates can have static data members, which are shared among all instances of the template.
+- Static data members in a class template must be explicitly declared and defined outside the class template.
+- The declaration specifies the template parameter list for the static data member.
+```cpp
+template <typename T = int, int SIZE = 50>
+class Array {
+    T arr[SIZE];
+    static unsigned count;
+public:
+    Array() { ++count; }
+    ~Array() { --count; }
+    static unsigned getCount() { return count; }
+};
+
+template <typename T, int SIZE>
+unsigned Array<T, SIZE>::count = 0;
+```
+> The `Array` class template has a static data member `count` that tracks the number of instances created.
