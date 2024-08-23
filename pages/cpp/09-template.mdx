@@ -153,3 +153,42 @@ template <typename T, int SIZE>
 unsigned Array<T, SIZE>::count = 0;
 ```
 > The `Array` class template has a static data member `count` that tracks the number of instances created.
+
+<br />
+
+## Template Specialization and Overloading
+### Template Specialization
+- Template specialization allows you to define specific behavior for a particular data type, overriding the generic template.
+
+```cpp
+template <typename T>
+T maximum(T a, T b) {
+    return a > b ? a : b;
+}
+
+template <>
+const char* maximum<const char*>(const char* a, const char* b) {
+    return strcmp(a, b) > 0 ? a : b;
+}
+```
+> The `maximum` function is specialized for `const char*` data type to compare C-style strings using `strcmp`.
+
+<br />
+
+### Template Overloading
+- Template overloading allows you to define multiple template functions with the same name but different template parameter lists.
+- **Overloading vs Specialization**: Overloading provides different function implementations based on the argument types, while specialization provides a specific implementation for a particular type within a template.
+
+```cpp
+template <typename T>
+T maximum(T a, T b) {
+    return a > b ? a : b;
+}
+
+const char* maximum(const char* a, const char* b) {
+    return strcmp(a, b) > 0 ? a : b;
+}
+```
+> The second `maximum` function overloads the template for `const char*` without using specialization, showcasing flexibility.
+
+<br />
