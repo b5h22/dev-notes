@@ -192,3 +192,17 @@ const char* maximum(const char* a, const char* b) {
 > The second `maximum` function overloads the template for `const char*` without using specialization, showcasing flexibility.
 
 <br />
+
+## Advanced Template Features
+### Default Template Parameter Values
+- Templates can have default parameter values, making them more flexible and easier to use without specifying every detail.
+
+```cpp
+template <typename T = int, int SIZE = 50>
+class Array {
+    T arr[SIZE];
+public:
+    T& operator[](int i) { return arr[i]; }
+};
+```
+> This allows the `Array` class to be instantiated without providing explicit template arguments.
