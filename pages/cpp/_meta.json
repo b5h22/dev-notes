@@ -7,5 +7,6 @@
   "06-polymorphism": "06-Polymorphism",
   "07-adv-inheritance": "07-Advanced Inheritance",
   "08-adv-polymorphism": "08-Advanced Polymorphism",
-  "09-templates": "09-Templates"
+  "09-templates": "09-Templates",
+  "10-class-relationships": "10-Class Relationships"
 }
