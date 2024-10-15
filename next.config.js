@@ -2,24 +2,22 @@
 const withNextra = require('nextra')({
   theme: 'nextra-theme-docs',
   themeConfig: './theme.config.tsx',
-  mdxOptions: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-  },
-});
+})
 
 const isProduction = process.env.NODE_ENV === 'production';
-const basePath = isProduction ? '/dev-notes' : '';
+const assetPrefix = isProduction ? '/dev-notes' : '';
 
-const nextraConfig = withNextra({
+const nextConfig = {
   images: {
     unoptimized: true,
   },
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: true,
-  basePath,
+  assetPrefix,
+  basePath: assetPrefix,
   output: 'export',
-});
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx']
+};
 
-module.exports = nextraConfig;
+module.exports = withNextra(nextConfig);

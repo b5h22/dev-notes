@@ -3,7 +3,7 @@
 ## Generalization and Specialization
 - Achieved through interfaces and virtual functions, allowing different classes to be treated as instances of the same base class, particularly when implementing type-specific behavior.
   
-  ```cpp
+```cpp
 class Animal {
 public:
     virtual void makeSound() {
@@ -40,7 +40,7 @@ a2->makeSound();  // Outputs: Meow
 - **Polymorphic Objects**: Objects can exhibit different behaviors when accessed through base class pointers or references, depending on their actual derived type.
 - **Dynamic Binding**: The function to be called is determined at runtime based on the actual type of the object, not the type of the pointer or reference used to access it.
 
-  ```cpp
+```cpp
   class Animal {
 public:
     virtual void speak() {
@@ -66,7 +66,7 @@ a->speak();  // Outputs: Dog barks (dynamic type is Dog)
 - **Clone Function**: To copy a polymorphic object, a `clone()` function is added to the abstract base class, allowing each derived class to define its specific cloning behavior.
 - **Implementatio**: The `clone()` function returns a pointer to a new object of the same derived type, enabling polymorphic copying.
 
-  ```cpp
+```cpp
   class Shape {
 public:
     virtual Shape* clone() const = 0;
@@ -106,7 +106,7 @@ copy->draw();  // Outputs: Drawing a Cube
 - **`dynamic_cast`**: Performs a runtime check to ensure the cast is valid, returning a null pointer if the cast fails.
 - **Operator Overloading**: Allows for type-specific behavior based on the dynamic type of the object.
 
-  ```cpp
+```cpp
 class Shape {
 public:
     virtual bool operator==(const Shape& other) const = 0;
