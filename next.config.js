@@ -17,7 +17,9 @@ const nextConfig = {
   assetPrefix,
   basePath: assetPrefix,
   output: 'export',
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx']
 };
 
-module.exports = withNextra(nextConfig);
+module.exports = {
+  ...withNextra(),
+  ...nextConfig,
+};
